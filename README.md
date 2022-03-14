@@ -1,5 +1,5 @@
 # CUDA
-implementing several image processing function using CUDA
+implementing several image processing functions using CUDA
 
 ## Histogram Computation
 
