@@ -2,7 +2,7 @@
 implementing several image processing functions using CUDA
 
 ## Histogram Computation
-used PRIVATIZATION via shared memory along with atomic operations.
+used PRIVATIZATION via shared memory along with aggregation of atomic operations to account for repeated values in specific regions of the image.
 Histogram computation causes many race conditions which need atomic operations but these interensic functions leads to high memory latency because it serializes the work to solve race conditions which results in decreased throughput.
 by directing the atomic operations to shared memeory and then copying the results back to memory latency is reduced significantly.
 
