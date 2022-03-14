@@ -21,4 +21,4 @@ by directing the atomic operations to shared memeory and then copying the result
 used cached for
 
 ## Matrix Multiplication
-shared memory with any dimension
+comparison of matrix multiplication between CPU and GPU both using global memroy and shared memroy 
