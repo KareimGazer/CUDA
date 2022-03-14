@@ -58,7 +58,7 @@ __global__ void histogramPrivatized(unsigned char* input, unsigned int* result, 
 	__syncthreads();
 
 	// local histogram operation
-	for(unsigned int i = tid; i < num_elements; i += blockDim.x*gridDim.x) {
+	for(unsigned int i = threadIndex; i < num_elements; i += blockDim.x*gridDim.x) {
 		int alphabet_position = buffer[i] – “a”;
 		if (alphabet_position >= 0 && alpha_position < 26) atomicAdd(&(histo_s[alphabet_position/4]), 1);
 	}
